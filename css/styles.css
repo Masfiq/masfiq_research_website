@@ -1,0 +1,487 @@
+:root {
+  --bw-black: #000000;
+  --bw-white: #ffffff;
+  --bw-muted: #bfbfbf; /* subtle dividers */
+  /* Sidebar layout sizing */
+--sidebar-w: 72px;
+  --topbar-h: 64px;
+}
+
+/* Base */
+html, body { height: 100%; }
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: var(--bw-white);
+  color: var(--bw-black);
+  letter-spacing: 0.2px;
+}
+
+/* Utilities: strict black & white */
+.bg-black { background-color: var(--bw-black) !important; }
+.bg-white { background-color: var(--bw-white) !important; }
+.text-black { color: var(--bw-black) !important; }
+.text-white { color: var(--bw-white) !important; }
+
+/* Visible focus */
+:focus-visible {
+  outline: 2px solid var(--bw-black);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------
+   Top Navbar (legacy) – kept for reuse
+---------------------------------------- */
+.navbar {
+  border-bottom: 0;               /* remove thin line under hover block */
+  --bs-navbar-padding-y: 0;       /* let hover fill full bar height */
+}
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Shared nav-link defaults (used by top navbar) */
+.nav-link {
+  position: relative;
+  display: block;                 /* background fills full clickable area */
+  color: var(--bw-white) !important;
+  opacity: 1;
+  padding: .75rem .9rem;
+  border-radius: 0 !important;    /* square corners */
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+/* Hover/active invert */
+.nav-link:hover,
+.nav-link:focus {
+  background: var(--bw-white) !important;
+  color: var(--bw-black) !important;
+}
+
+/* Remove old underline effect */
+.nav-link::after { display: none; }
+
+/* Active state */
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  background: var(--bw-white) !important;
+  color: var(--bw-black) !important;
+  
+}
+
+/* Sections */
+section {
+  padding: 6rem 0 3rem;
+  border-bottom: 1px solid var(--bw-muted);
+}
+
+/* Clean divider below any top bar */
+main { border-top: 1px solid var(--bw-muted); }
+
+/* ---------------------------------------
+   Sidebar + Topbar Layout (current)
+---------------------------------------- */
+
+/* Brand link stays white, no browser underline */
+.topbar .brand,
+.topbar .brand:link,
+.topbar .brand:visited,
+.topbar .brand:hover,
+.topbar .brand:active,
+.topbar .brand:focus {
+  color: var(--bw-white) !important;
+  text-decoration: none !important;
+}
+
+.layout { min-height: 100vh; }
+
+/* Fixed left sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  padding-top: var(--topbar-h);
+  
+}
+
+/* Fixed top bar (name on right) */
+.topbar {
+  position: fixed;
+  top: 0; left: var(--sidebar-w); right: 0;
+  height: var(--topbar-h);
+  border-bottom: 1px solid var(--bw-muted);
+  display: flex;
+  align-items: center;
+  background: var(--bw-black);
+  color: var(--bw-white);
+  z-index: 1100;
+}
+
+/* Offset section anchors so headings aren't hidden by the top bar
+main section[id] {
+  scroll-margin-top: calc(var(--topbar-h, 56px) + 12px);
+} */
+
+/* Center the brand in the top bar */
+.topbar .container-fluid {
+  justify-content: center;            /* centers children horizontally */
+}
+
+/* Brand wordmark: centered + full-width underline */
+.topbar .brand {
+  margin: 0 auto;                     /* override the earlier margin-left:auto */
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  display: inline-block;              /* so ::after width matches text */
+}
+
+.topbar .brand::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;                        /* full underline */
+  background: var(--bw-white);
+  margin-top: 6px;
+}
+
+/* Push content away from fixed bars */
+main {
+  margin-left: var(--sidebar-w);
+  margin-top: var(--topbar-h);
+}
+
+/* Sidebar nav items — icon-only */
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;               /* center icons horizontally */
+  color: var(--bw-white) !important;
+  padding: 1rem 0;                        /* taller click target */
+  border-radius: 0 !important;            /* square corners */
+  gap: 0;                                 /* no gap since label hidden */
+}
+
+/* Icon sizing; hide labels */
+.sidebar .nav-link i { 
+  font-size: 1.25rem; 
+  line-height: 1; 
+}
+.sidebar .nav-link span { 
+  display: none;                           /* hide text labels */
+}
+
+/* Hover/active invert */
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus,
+.sidebar .nav-link.active {
+  background: var(--bw-white) !important;
+  color: var(--bw-black) !important;
+}
+
+/* Home slider */
+
+
+/* Black/white carousel tweaks */
+.bw-carousel .carousel-indicators [data-bs-target] {
+  background-color: var(--bw-black);
+}
+.bw-carousel .carousel-control-prev-icon,
+.bw-carousel .carousel-control-next-icon {
+  filter: invert(1); /* turn default white icons black on white background */
+}
+.bw-carousel .carousel-item .border {
+  border-color: var(--bw-muted);
+}
+
+
+
+/* for carousoul image  */
+/* Image carousel sizing + black/white treatment */
+.bw-slide-img {
+  height: 600px;               /* desktop height */
+  object-fit: cover;
+  /* filter: grayscale(100%);     keep the site black & white */
+}
+@media (max-width: 768px) {
+  .bw-slide-img { height: 220px; }  /* smaller on mobile */
+}
+
+/* Caption styling: readable over any image */
+.carousel-caption {
+  left: 1rem; right: auto; bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+.carousel-caption h3, 
+.carousel-caption p { color: #fff; }
+
+/* Optional: subtle dark overlay for extra contrast */
+.carousel-item::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+/* carousol buttons */
+/* Custom round carousel controls with transparent arrow */
+.bw-ctrl {
+  width: auto;                      /* don't stretch edge-to-edge */
+  opacity: 1;                       /* always visible */
+}
+.bw-ctrl .ctrl-svg {
+  width: 44px; height: 44px;        /* size of the round button */
+  display: block;
+}
+
+/* Position a bit inward from edges */
+.carousel-control-prev.bw-ctrl { left: 0.75rem; }
+.carousel-control-next.bw-ctrl { right: 0.75rem; }
+
+/* Remove Bootstrap’s default chevron images */
+.bw-carousel .carousel-control-prev-icon,
+.bw-carousel .carousel-control-next-icon { display: none; }
+
+/* Remove any dark overlay + filters on slides */
+.carousel .bw-slide::after,
+.carousel .carousel-item::after { background: none !important; opacity: 0 !important; }
+.carousel .carousel-item img { filter: none !important; }
+
+/* Keep captions readable without an overlay */
+.carousel-caption { text-shadow: 0 1px 3px rgba(0,0,0,.45); }
+
+
+
+/* articles */
+
+/* Articles list (monochrome)
+.articles-list .article-item + .article-item { margin-top: 1.25rem; }
+.article-links .btn { border-color: var(--bw-black); }
+.article-links .btn:hover, .article-links .btn:focus {
+  background: var(--bw-black); color: var(--bw-white);
+} */
+
+/* Grid cards for Articles (black/white) */
+.bw-article {
+  border: 1px solid var(--bw-muted);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.bw-article:hover,
+.bw-article:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* Image crop for consistent card tops */
+.bw-article-img {
+  height: 180px;        /* adjust to taste: 140–220px */
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Buttons stay monochrome */
+.bw-article .btn { border-color: var(--bw-black); }
+.bw-article .btn:hover,
+.bw-article .btn:focus {
+  background: var(--bw-black);
+  color: var(--bw-white);
+}
+
+
+/* for publication  section */
+/*  filters */
+.bw-filters .btn { border-color: var(--bw-black); margin-right: .5rem; }
+.bw-filters .btn.active,
+.bw-filters .btn:hover,
+.bw-filters .btn:focus { background: var(--bw-black); color: var(--bw-white); }
+
+/* Theme cards */
+.bw-theme { border: 1px solid var(--bw-muted); transition: transform 150ms ease, box-shadow 150ms ease; }
+.bw-theme:hover, .bw-theme:focus-within { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+.bw-badges .badge { margin-right: .25rem; }
+
+
+/* for the projects */
+/* .bw-project { border:1px solid var(--bw-muted); transition:transform .15s, box-shadow .15s; }
+.bw-project:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(0,0,0,.08); }
+.bw-project .btn{ border-color:var(--bw-black); }
+.bw-project .btn:hover{ background:var(--bw-black); color:var(--bw-white); } */
+
+/* Project cards with images */
+.bw-project { 
+  border: 1px solid var(--bw-muted); 
+  transition: transform .15s ease, box-shadow .15s ease; 
+}
+.bw-project:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 16px rgba(0,0,0,.08); 
+}
+.bw-project .btn { border-color: var(--bw-black); }
+.bw-project .btn:hover, .bw-project .btn:focus { 
+  background: var(--bw-black); color: var(--bw-white); 
+}
+
+/* Uniform image crop */
+.bw-project-img {
+  height: 160px;        /* tweak 140–220px to taste */
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+/* Optional placeholder if an image is missing */
+.bw-project-img[src=""] {
+  background: repeating-linear-gradient(
+    45deg, #eee, #eee 10px, #fff 10px, #fff 20px
+  );
+  height: 160px;
+}
+
+/* /////////////////////////////////////////// */
+/* for cv part */
+
+/* Big, responsive PDF frame for the CV iframe */
+.bw-pdf {
+  height: calc(100vh - var(--topbar-h) - 48px); /* fills screen under black top bar */
+  border: 1px solid var(--bw-muted);
+  background: #fff;
+  display: block;
+}
+
+/* Tweak height on smaller screens */
+@media (max-width: 768px) {
+  .bw-pdf { height: 80vh; }
+}
+
+/* /////////////////////////////////////////////////// */
+/* for contact form  */ 
+/* Contact card buttons (if not already added) */
+.bw-contact { border: 1px solid var(--bw-muted); }
+.bw-contact .btn { border-color: var(--bw-black); }
+.bw-contact .btn:hover, .bw-contact .btn:focus { background: var(--bw-black); color: var(--bw-white); }
+
+/* Separator with centered “or” */
+.bw-sep { display:flex; align-items:center; gap:.75rem; color: var(--bw-black); }
+.bw-sep::before, .bw-sep::after { content:""; flex:1; border-bottom:1px solid var(--bw-muted); }
+.bw-sep > span { padding: .15rem .5rem; background: var(--bw-white); letter-spacing:.08em; text-transform:uppercase; font-size:.8rem; }
+
+/* Minimal monochrome form styling (if not already added) */
+.bw-form .form-control { border-color: var(--bw-black); }
+.bw-form .form-control:focus { box-shadow: none; outline: 2px solid var(--bw-black); }
+.bw-form .btn { border-color: var(--bw-black); }
+.bw-form .btn:hover, .bw-form .btn:focus { background: var(--bw-black); color: var(--bw-white); }
+
+
+
+
+
+
+/* /////////////////////////////////////////// */
+
+/* links section */
+
+/* Big, bold external link tiles (monochrome) */
+.bw-linkcard {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--bw-black);
+  text-decoration: none;
+  color: var(--bw-black);
+  background: var(--bw-white);
+  transition: background-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.bw-linkcard i {
+  font-size: 2rem;         /* big icon */
+  line-height: 1;
+}
+.bw-linkcard span {
+  font-weight: 700;        /* bold name */
+  letter-spacing: .02em;
+  font-size: 1.15rem;
+}
+.bw-linkcard:hover, .bw-linkcard:focus {
+  background: var(--bw-black);
+  color: var(--bw-white);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* /////////////////////////////////////////// */
+/* navbar */
+/* Keep the sidebar itself black */
+.sidebar,
+.sidebar .nav,
+.sidebar .nav-item {
+  background: var(--bw-black) !important;
+}
+
+/* Default: links are transparent on the black bar */
+.sidebar .nav-link {
+  background: transparent !important;
+  color: var(--bw-white) !important;
+  padding: 1.15rem 0;
+}
+
+.sidebar .nav-link i { font-size: 1.6rem; }  
+
+/* Only the hovered/clicked (active) link turns white */
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus,
+.sidebar .nav-link.active {
+  background: var(--bw-white) !important;
+  color: var(--bw-black) !important;
+}
+
+
+/* about me section */
+/* About section */
+.bw-about { border: 1px solid var(--bw-muted); }
+.bw-about .btn { border-color: var(--bw-black); }
+.bw-about .btn:hover, .bw-about .btn:focus { background: var(--bw-black); color: var(--bw-white); }
+
+.about-avatar {
+  width: 112px; height: 112px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--bw-black);
+  background: #fff;
+
+  object-position: 5% 40%;      /* <— tweak this to center your face */
+}
+@media (max-width: 768px) {
+  .about-avatar { width: 88px; height: 88px; }
+}
+
+
+/* Remove the dark overlay on slides */
+.carousel-item::before {
+  background: transparent !important;
+  content: none !important;   /* ensure the pseudo-element disappears */
+}
+
+/* Make sure no image filter is applied */
+.bw-slide-img { filter: none !important; }
+
+/* Keep captions readable without dimming the photo */
+.carousel-caption { text-shadow: 0 1px 2px rgba(0,0,0,.45);
+font-size: 1.25rem;     /* bigger text */
+  font-weight: 700;       /* bold */ }
+
+  /* Make links in the carousel caption white */
+.carousel-caption a,
+.carousel-caption a:link,
+.carousel-caption a:visited,
+.carousel-caption a:hover,
+.carousel-caption a:active,
+.carousel-caption a:focus {
+  color: #fff !important;
+  text-decoration-color: rgba(255,255,255,.9); /* underline stays white */
+}
+
+/* move honeypot off-screen rather than display:none (some bots ignore hidden) */
+.hp{ position:absolute; left:-200vw; width:1px; height:1px; overflow:hidden; }
+
+
+

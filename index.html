@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masfiq Reza — Research Portfolio</title>
+
+  <!-- Google Fonts: Nunito Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons for sidebar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Left vertical sidebar nav with icons -->
+    <nav class="sidebar bg-black" aria-label="Section navigation">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home" title="Home">
+                <i class="bi bi-house-fill"></i><span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" title="About Me">
+                <i class="bi bi-person-fill"></i><span>About</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#articles" title="Articles">
+                <i class="bi bi-journal"></i><span>Articles</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#publications" title="Publications">
+                <i class="bi bi-journal-text"></i><span>Publications</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" title="Projects">
+                <i class="bi bi-hammer"></i><span>Projects</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#teaching" title="Teaching">
+                <i class="bi bi-mortarboard-fill"></i><span>Teaching</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#cv" title="CV">
+                <i class="bi bi-file-earmark-person-fill"></i><span>CV</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact" title="Contacts">
+                <i class="bi bi-envelope-fill"></i><span>Contacts</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#links" title="Links">
+                <i class="bi bi-link-45deg"></i><span>Links</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Top bar with name aligned right -->
+    <header class="topbar bg-black text-white">
+      <!-- <div class="container-fluid h-100">
+        <div class="d-flex justify-content-end align-items-center h-100">
+          <div class="h5 m-0">Masfiq Reza</div>
+        </div>
+      </div> -->
+
+      <div class="topbar bg-black text-white">
+        <div class="container-fluid d-flex align-items-center">
+          <a class="brand" href="#home">Masfiq Reza</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- home section -->
+      <section id="home" class="bg-white">
+        <div class="container">
+          <div id="updatesCarousel" class="carousel slide bw-carousel" data-bs-ride="carousel" data-bs-touch="true" aria-label="Latest updates">
+            <!-- Dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#updatesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#updatesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#updatesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active" data-bs-interval="6000">
+                <img src="assets/masfiq_2.jpg" class="d-block w-100 bw-slide-img" alt="Update 1 image" loading="lazy">
+                <div class="carousel-caption text-start">
+                  <h3 class="h4 mb-1">Welcome!!!</h3>
+                  <p class="mb-0">I am Masfiq - student of Computer Science. This is my academic website.<br> Beside my academic activity, I like hiking, travelling, reading, <br> engaging in productive discussion as well as spending time in the outdoor nature.<br>This photo is from a summit of a mountain in Rocky Mountain range</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="https://images.pexels.com/photos/1463975/pexels-photo-1463975.jpeg?_gl=1*b47p5b*_ga*MTI1MzkwMDA1MC4xNzYxMTkxNzAz*_ga_8JE65Q40S6*czE3NjQ0MDEyNTYkbzEwJGcxJHQxNzY0NDAxMzQ2JGozOCRsMCRoMA.." class="d-block w-100 bw-slide-img" alt="Update 2 image" loading="lazy">
+                <div class="carousel-caption text-start">
+                  <h3 class="h4 mb-1">Current Research Work</h3>
+                  <p class="mb-0">I am currently working with remote sensing data to make<br> an accurate model to predict biomass. See my <a href="#articles">articles</a> to know more</p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item" data-bs-interval="6000">
+                <img src="https://images.pexels.com/photos/18231356/pexels-photo-18231356.jpeg?_gl=1*1uetop6*_ga*MTI1MzkwMDA1MC4xNzYxMTkxNzAz*_ga_8JE65Q40S6*czE3NjQ0MDEyNTYkbzEwJGcxJHQxNzY0NDAyMzU3JGo1OSRsMCRoMA.." class="d-block w-100 bw-slide-img" alt="Update 3 image" loading="lazy">
+                <div class="carousel-caption text-start">
+                  <h3 class="h4 mb-1">Recent activity</h3>
+                  <p class="mb-0">I am actively looking for PhD advisor<br> for Fall 2026 semester.Here is my <a href="#cv">CV</a></p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Prev/Next -->
+            <!-- Prev -->
+            <button class="carousel-control-prev bw-ctrl" type="button" data-bs-target="#updatesCarousel" data-bs-slide="prev" aria-label="Previous">
+              <!-- White circle with transparent left arrow (mask) -->
+             <svg class="ctrl-svg" viewBox="0 0 44 44" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <mask id="cut-right">
+                  <rect width="44" height="44" fill="#fff"/>
+                  <!-- Solid triangle pointing right (cuts out) -->
+                  <polygon points="26,14 16,22 26,30" fill="#000"/>
+                </mask>
+              </defs>
+              <circle cx="22" cy="22" r="22" fill="#fff" mask="url(#cut-right)"/>
+            </svg>
+
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <!-- Next -->
+            <button class="carousel-control-next bw-ctrl" type="button" data-bs-target="#updatesCarousel" data-bs-slide="next" aria-label="Next">
+              <!-- White circle with transparent right arrow (mask) -->
+              <svg class="ctrl-svg" viewBox="0 0 44 44" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <mask id="cut-left">
+                    <rect width="44" height="44" fill="#fff"/>
+                    <!-- Solid triangle pointing left (cuts out) -->
+                    <polygon points="18,14 28,22 18,30" fill="#000"/>
+                  </mask>
+                </defs>
+                <circle cx="22" cy="22" r="22" fill="#fff" mask="url(#cut-left)"/>
+              </svg>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+                      </div>
+                    </div>
+      </section>
+      
+<!-- about me section -->
+        <section id="about" class="bg-white">
+          <div class="container">
+            <h2 class="h3 mb-3">About Me</h2>
+
+            <article class="card bw-about">
+              <div class="card-body d-flex flex-column flex-md-row align-items-start gap-3">
+                <!-- Optional photo (replace src or remove this <img>) -->
+                <img src="assets/masfiq.jpg" alt="Masfiq Reza" class="about-avatar">
+
+                <div>
+                  <p class="mb-2">
+                     I am currently doing my Masters in Computer Science at Colorado State University. I am also working as Graduate Teaching Assistant for the same department. My work sits at the intersection of software, research, and data—especially big data, remote sensing imaging, machine learning, deep learning building on prior experience as a university lecturer and SQA engineer. 
+                  </p>
+                  <p class="mb-3">
+                    Right now, I’m using <em>remote-sensing data </em> to <em>predict biomass</em> and turn those models into clear, reproducible workflows.
+                  </p>
+
+                  
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+
+
+      <section id="articles" class="bg-white"><div class="container">
+        <!-- <h2 class="h3">Articles</h2> -->
+        <div class="container">
+          <h2 class="h3 mb-4">Articles</h2>
+
+          <div class="row g-4" id="articles-grid">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card bw-article h-100" itemscope itemtype="https://schema.org/Article">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*F1eqb5xW4qO7-r-12QKwuQ.jpeg" class="card-img-top bw-article-img" alt="Measuring Trust in Freelance Journalism" itemprop="image">
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-1" itemprop="headline">Want to work with GEDI dataset? Start here(Part 1)</h3>
+                  <p class="card-subtitle small mb-2">Medium .  <time datetime="2025-17-11">Nov 17, 2025</time></p>
+                  <p class="card-text small" itemprop="description">Beginner's guide for GEDI's dataset</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                  <a href="https://medium.com/@rezamasfiq/want-to-work-with-gedi-dataset-start-here-part-1-31cd7645baeb" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Read</a>
+                  
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card bw-article h-100" itemscope itemtype="https://schema.org/Article">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Cl1bQ8NjWoHJIlPPpNuWvg.jpeg" class="card-img-top bw-article-img" alt="Parallel News Arenas" itemprop="image">
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-1" itemprop="headline">NASA’s HLS dataset for Absolute Beginner: A Super Simple Intro</h3>
+                  <p class="card-subtitle small mb-2">Medium . <time datetime="2025-27-11">Nov 27, 2025</time></p>
+                  <p class="card-text small">HLS datset guide for the new researcher</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                  <a href="https://medium.com/@rezamasfiq/nasas-hls-dataset-for-absolute-beginner-a-super-simple-intro-bed0772015cb" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Read</a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card bw-article h-100" itemscope itemtype="https://schema.org/Article">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*N4YHa_LVFPtIlnq3Wx9UmA.jpeg" class="card-img-top bw-article-img" alt="Platform Gatekeeping" itemprop="image">
+                <div class="card-body">
+                  <h3 class="card-title h6 mb-1">ADNI MRI Data Preprocessing for Absolute Beginner: A quick guide</h3>
+                  <p class="card-subtitle small mb-2">Medium .  <time datetime="2025-11-28">Nov 28, 2025</time></p>
+                  <p class="card-text small">ADNI dataset guide</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                  <a href="https://medium.com/@rezamasfiq/adni-mri-data-preprocessing-for-absolute-beginner-a-quick-guide-c44e86473717" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Read</a>
+                  
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        
+
+              
+            
+      </div>
+    </section>
+
+      <section id="publications" class="bg-white">
+        
+          <!-- <h2 class="h3">Research</h2> -->
+           <div class="container">
+              <h2 class="h3 mb-3">Publications</h2>
+
+              <!-- Filter pills -->
+              <!-- <div class="bw-filters mb-3" id="res-filters">
+                <button class="btn btn-sm btn-outline-dark active" data-filter="all">All</button>
+                <button class="btn btn-sm btn-outline-dark" data-filter="ml">ML/CV</button>
+                <button class="btn btn-sm btn-outline-dark" data-filter="geo">Geophysical Fluids</button>
+                <button class="btn btn-sm btn-outline-dark" data-filter="media">Media/Journalism</button>
+              </div> -->
+
+              <!-- Theme cards -->
+
+                
+
+                <div class="row g-4" id="res-themes">
+                  <div class="col-12 col-md-6">
+                    <article class="card bw-theme h-100" data-tags="ml">
+                      <div class="card-body">
+                        <h3 class="h5 mb-1">Neural Network Architecture for the Classification of Alzheimer's Disease from Brain MRI</h3>
+                        <p class="small mb-2">Custom model for detecting Alzheimer’s deceases</p>
+                        <div class="bw-badges">
+                          <span class="badge text-bg-light border">Neural Network</span>
+                          <span class="badge text-bg-light border">Deep Learning </span>
+                          <span class="badge text-bg-light border">Python</span>
+                        </div>
+                      </div>
+
+                      <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9707412" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Paper</a>
+                        
+                        <a href="https://adni.loni.usc.edu/data-samples/adni-data/" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Data</a>
+                      </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <article class="card bw-theme h-100" data-tags="geo">
+                    <div class="card-body">
+                      <h3 class="h5 mb-1">Climate data dynamics: A high-volume real world structured weather dataset</h3>
+                      <p class="small mb-2">A dataset made public for weather related work</p>
+                      <div class="bw-badges">
+                        <span class="badge text-bg-light border">Python</span>
+                      
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                      <a href="https://www.sciencedirect.com/science/article/pii/S2352340924011181" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Paper</a>
+                      <a href="https://data.mendeley.com/datasets/tbrhznpwg9/1" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Data</a>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <article class="card bw-theme h-100" data-tags="geo">
+                    <div class="card-body">
+                      <h3 class="h5 mb-1">Contribution History as a Key Feature in OSS Task Recommendation: an LLM-Based Empirical Study</h3>
+                      <p class="small mb-2">A different approach to recommend task to developer based on their github profile with dataset made from data mining</p>
+                      <div class="bw-badges">
+                        <span class="badge text-bg-light border">Python</span>
+                        <span class="badge text-bg-light border">Github</span>
+                        <span class="badge text-bg-light border">Gen AI agent</span>
+                        <span class="badge text-bg-light border">software engineering </span>
+                      
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                      <a href="https://scholar.google.com/scholar?oi=bibs&cluster=3666500267013967675&btnI=1&hl=en" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Paper</a>
+                      
+                    </div>
+                  </article>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <article class="card bw-theme h-100" data-tags="geo">
+                    <div class="card-body">
+                      <h3 class="h5 mb-1">Impact of Covid-19 on Bangladeshi university students mental health: ML and DL analysis</h3>
+                      <p class="small mb-2">Work on the condition of mental health during pandemic </p>
+                      <div class="bw-badges">
+                        <span class="badge text-bg-light border">Python</span>
+                    
+                      
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0 pt-0 pb-3 px-3">
+                      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=U6CpooIAAAAJ&citation_for_view=U6CpooIAAAAJ:9yKSN-GCB0IC" class="btn btn-sm btn-outline-dark" target="_blank" rel="noopener noreferrer">Paper</a>
+                      
+                    </div>
+                  </article>
+                </div>
+
+                
+
+                
+              </div>
+            </div>
+
+          
+        
+      </section>
+
+
+
+      <section id="projects" class="bg-white">
+        <div class="container">
+          <h2 class="h3 mb-4">Projects</h2>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card bw-project h-100">
+              <!-- Project image -->
+              <img src="https://images.pexels.com/photos/5723883/pexels-photo-5723883.jpeg?_gl=1*oo1g26*_ga*MTI1MzkwMDA1MC4xNzYxMTkxNzAz*_ga_8JE65Q40S6*czE3NjQzOTAxMjkkbzkkZzEkdDE3NjQzOTAyMTYkajU5JGwwJGgw" class="card-img-top bw-project-img" alt="PROJECT_1 screenshot">
+
+              <div class="card-body">
+                <h3 class="h6 mb-1">
+                  <a class="text-black text-decoration-none" href="https://github.com/Masfiq/Neural_Network_Model_for_Classification_of_Alzeihmer_from_MRI_Images" target="_blank" rel="noopener">
+                    Neural Network Model for Classification of Alzeihmer from MRI Images
+                  </a>
+                </h3>
+                <p class="small mb-2">Custom CNN Model to detect the Alzheimer diseases from 3D MRI images.</p>
+                <div class="small mb-2">Python . Deep Learning</div>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/Masfiq/Neural_Network_Model_for_Classification_of_Alzeihmer_from_MRI_Images" target="_blank" rel="noopener">Code</a>
+                  <!-- <a class="btn btn-sm btn-outline-dark" href="#" target="_blank" rel="noopener">Demo</a>
+                  <a class="btn btn-sm btn-outline-dark" href="#" target="_blank" rel="noopener">Docs</a> -->
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="teaching" class="bg-white">
+        <div class="container">
+          <h2 class="h3 mb-3">Teaching</h2>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr><th>Course</th><th>Role</th><th>Term</th><th>Links</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Operating System </td>
+                  <td>GTA</td><td>Fall 2025</td>
+                  <!-- <td><a href="#">Syllabus</a> · <a href="#">Slides</a> · <a href="#">Assignments</a></td> -->
+                  <td><a href="https://www.cs.colostate.edu/~cs370/Fall25/schedule.html">Syllabus</a></td>
+                </tr>
+                <tr>
+                  <td>Modern Web Applications </td>
+                  <td>GTA</td><td>Spring 2025</td>
+                  <!-- <td><a href="#">Syllabus</a> · <a href="#">Slides</a> · <a href="#">Assignments</a></td> -->
+                  <td><a href="https://www.cs.colostate.edu/~cs312/Spring24/#/syllabus">Syllabus</a></td>
+                </tr>
+                <tr>
+                  <td>Modern Cybersecuirity</td>
+                  <td>GTA</td><td>Fall 2024</td>
+                  <!-- <td><a href="#">Syllabus</a> · <a href="#">Slides</a> · <a href="#">Assignments</a></td> -->
+                  <td><a href="https://www.cs.colostate.edu/~cs456/#/syllabus">Syllabus</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="cv" class="bg-white">
+        <!-- using browser built-in PDF viewer -->
+        <div class="container">
+          <h2 class="h3 mb-3">CV</h2>
+          <div class="d-flex gap-2 mb-2">
+            <a class="btn btn-sm btn-outline-dark" href="assets/Masfiq_Reza_CV.pdf" target="_blank"
+            rel="noopener" download>Download PDF</a>
+            <a class="btn btn-sm btn-outline-dark" href="assets/Masfiq_Reza_CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
+          </div>
+          <iframe
+            src="assets/Masfiq_Reza_CV.pdf#view=FitH"
+            title="Masfiq Reza CV"
+            class="w-100 bw-pdf"
+          ></iframe>
+        </div>
+
+        
+
+        
+
+
+
+
+      </section>
+
+      <section id="contact" class="bg-white">
+        <div class="container">
+          <h2 class="h3 mb-3">Contact</h2>
+
+          <!-- A) Quick contact card -->
+          <div class="card bw-contact mb-3">
+            <div class="card-body">
+              <p class="mb-3">I’m happy to connect about research, collaborations, and talks.</p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-dark" href="mailto:masfiq.reza@colostate.edu">Email me</a>
+
+                <button class="btn btn-outline-dark" id="copy-email" type="button"
+                        data-email="masfiq.reza@colostate.edu">Copy email</button>
+
+                
+                <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/masfiq-reza/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Separator -->
+          <div class="bw-sep my-4" role="separator" aria-label="or"><span>or</span></div>
+
+          <!-- B) Lightweight form (Formspree) -->
+          <form action="https://formspree.io/f/xrbynyne" method="POST" class="bw-form" id="contact-form">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label">Your name</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Your email</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea name="message" rows="5" class="form-control" required></textarea>
+              </div>
+
+                <!-- Honeypot -->
+                  <div class="hp" aria-hidden="true">
+                    <label>Leave this empty</label>
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                  </div>
+
+
+
+              <div class="col-12">
+                <button  id="sendBtn" class="btn btn-outline-dark" type="submit"disabled>Send</button>
+              </div>
+            </div>
+          </form>
+          <script>
+              setTimeout(()=> document.getElementById('sendBtn').disabled = false, 2000);
+            </script>
+        </div>
+
+
+
+      </section>
+     
+        <section id="links" class="bg-white">
+          <div class="container">
+            <h2 class="h3 mb-4">Links</h2>
+
+            <div class="row g-3" id="links-grid">
+              <!-- LinkedIn -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <a class="bw-linkcard" href="https://www.linkedin.com/in/masfiq-reza/" target="_blank" rel="noopener">
+                  <i class="bi bi-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+
+              <!-- Google Scholar -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <a class="bw-linkcard" href="https://scholar.google.com/citations?user=U6CpooIAAAAJ&hl=en" target="_blank" rel="noopener">
+                  <i class="bi bi-mortarboard"></i>
+                  <span>Google Scholar</span>
+                </a>
+              </div>
+
+              <!-- ResearchGate -->
+              <div class="col-12 col-md-6 col-lg-4">
+                <a class="bw-linkcard" href="https://www.researchgate.net/profile/Khondaker-Reza?ev=hdr_xprf" target="_blank" rel="noopener">
+                  <i class="bi bi-diagram-3"></i>
+                  <span>ResearchGate</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        
+
+    </main>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Active link on scroll still works for sidebar -->
+  <script>
+    document.addEventListener('scroll', () => {
+      const links = document.querySelectorAll('.sidebar .nav-link');
+      const scrollPos = window.scrollY + 120; // offset for early activation
+      links.forEach(link => link.classList.remove('active'));
+      document.querySelectorAll('main section[id]').forEach(sec => {
+        if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+          const activeLink = document.querySelector('.sidebar .nav-link[href="#' + sec.id + '"]');
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- for research section -->
+  <script>
+  const btns = document.querySelectorAll('#res-filters [data-filter]');
+  const cards = document.querySelectorAll('#res-themes .bw-theme');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    const f = b.dataset.filter;
+    cards.forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.tags.includes(f)) ? '' : 'none';
+    });
+  }));
+</script>
+
+
+<!-- for cv part -->
+
+<!-- for contact part --> 
+<script>
+  const copyBtn = document.getElementById('copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(copyBtn.dataset.email);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => copyBtn.textContent = 'Copy email', 1200);
+      } catch {}
+    });
+  }
+</script>
+
+<script>
+  // Sidebar active state: click + intersection observer
+  const navLinks = document.querySelectorAll('.sidebar .nav-link');
+  const sections = document.querySelectorAll('main section[id]');
+
+  // On click: set active immediately
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // On scroll: set active based on visible section
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const activeLink = document.querySelector(`.sidebar .nav-link[href="#${id}"]`);
+        if (activeLink) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  }, {
+    // account for the fixed topbar; trigger when 10% of a section enters
+    rootMargin: '-80px 0px -70% 0px',
+    threshold: 0.1
+  });
+
+  sections.forEach(sec => io.observe(sec));
+</script>
+
+
+
+
+
+
+</body>
+</html>
